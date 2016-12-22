@@ -25,12 +25,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //-------delete if not working from here
-        setContentView(R.layout.fragment_main);
+        //setContentView(R.layout.fragment_main);
 
         String url = "http://www.manilafame.com/en/";
-        WebView view=(WebView) this.findViewById(R.id.webView);
-        WebView view1=(WebView) this.findViewById(R.id.webView1);
+        WebView view=(WebView) this.findViewById(R.id.webView1);
+
         view.getSettings().setJavaScriptEnabled(true);
+
         view.loadUrl(url);
         //-----to here-----=-
         //set the fragment initially

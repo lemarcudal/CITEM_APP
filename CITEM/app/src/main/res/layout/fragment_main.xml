@@ -26,13 +26,8 @@
         android:id="@+id/textView" android:gravity="center"
             android:layout_centerVertical="true"
             android:layout_alignStart="@+id/imageView" />
-        <!--delete this wv if not working-->
-        <WebView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/webView1"/>
+
+
     </RelativeLayout>
 
 </ScrollView>
