@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,7 +24,15 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //-------delete if not working from here
+        setContentView(R.layout.fragment_main);
 
+        String url = "http://www.manilafame.com/en/";
+        WebView view=(WebView) this.findViewById(R.id.webView);
+        WebView view1=(WebView) this.findViewById(R.id.webView1);
+        view.getSettings().setJavaScriptEnabled(true);
+        view.loadUrl(url);
+        //-----to here-----=-
         //set the fragment initially
         MainFragment fragment = new MainFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction =
