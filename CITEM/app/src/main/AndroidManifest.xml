@@ -22,28 +22,6 @@
         </activity>
 
         <activity
-            android:name=".MainFragment"
-            android:label="MAN0ILA FAME"
-            android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="com.example.guitarista.citem.MainActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".GalleryFragment"
-            android:label="MANILA FAME"
-            android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="com.example.guitarista.citem.MainActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".SplashScreen"
             android:label="MANILA FAME">
             <intent-filter>
