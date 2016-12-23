@@ -10,10 +10,32 @@
         android:label="MANILA FAME"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".MainActivity"
             android:label="MANILA FAME"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.example.guitarista.citem.MainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainFragment"
+            android:label="MANILA FAME"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.example.guitarista.citem.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GalleryFragment"
+            android:label="MANILA FAME"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="com.example.guitarista.citem.MainActivity" />
 
