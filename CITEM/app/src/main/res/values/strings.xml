@@ -35,4 +35,10 @@
         Adding a 2nd line like this should work.
         It should not cause parsing errors
     </string>
+    <string name="citem_address">
+        Golden Shell Pavilion, ITC Complex,
+        Roxas Boulevard corner Sen. Gil J. Puyat Avenue,
+        Pasay City 1300, PHILIPPINES
+    </string>
+
 </resources>
