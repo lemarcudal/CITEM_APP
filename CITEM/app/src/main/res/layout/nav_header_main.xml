@@ -4,6 +4,7 @@
     android:layout_height="190dp"
     android:background="@drawable/background_material_gray"
     android:orientation="vertical"
+
     >
 
     <ImageView
