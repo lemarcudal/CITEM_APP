@@ -24,11 +24,4 @@
         app:menu="@menu/activity_main_drawer" />
 
 
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView1"/>
-    <!--delete this wv if not working-->
-
-
 </android.support.v4.widget.DrawerLayout>
