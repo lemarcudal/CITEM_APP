@@ -15,9 +15,9 @@
             android:icon="@drawable/ic_shop_black_24dp"
             android:title="Exhibitors" />
         <item
-            android:id="@+id/nav_tradeShowHL"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Trade Show Highlights" />
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Events and Conferences"/>
         <item
             android:id="@+id/nav_stories"
             android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
