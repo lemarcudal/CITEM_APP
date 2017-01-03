@@ -7,14 +7,6 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_buyers"
-            android:icon="@drawable/ic_local_atm_black_24dp"
-            android:title="Buyers" />
-        <item
-            android:id="@+id/nav_exhib"
-            android:icon="@drawable/ic_shop_black_24dp"
-            android:title="Exhibitors" />
-        <item
             android:id="@+id/nav_events"
             android:icon="@drawable/ic_event_black_24dp"
             android:title="Events and Conferences"/>
@@ -27,9 +19,9 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
-            android:id="@+id/nav_tph"
-            android:icon="@drawable/ic_filter_hdr_black_24dp"
-            android:title="The Philippines" />
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="My Schedule" />
     </group>
 
     <item android:title="Communicate">

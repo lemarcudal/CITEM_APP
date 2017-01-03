@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-    
+
         } else if (id == R.id.nav_events) {
             EventFragment fragment = new EventFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
@@ -130,11 +130,12 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_buyers) {
-
-        } else if (id == R.id.nav_exhib) {
-
-        } else if (id == R.id.nav_tph) {
+        }  else if (id == R.id.nav_schedule) {
+            ScheduleFragment fragment = new ScheduleFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
         }
 
