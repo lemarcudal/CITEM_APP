@@ -1,8 +1,14 @@
 package com.example.guitarista.citem;
 
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +19,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.sundeepk.compactcalendarview.CompactCalendarView;
+import com.github.sundeepk.compactcalendarview.domain.Event;
+import android.graphics.Color;
+import android.widget.Toast;
+
+import java.util.Date;
+import java.util.Locale;
+
+
+@TargetApi(Build.VERSION_CODES.N)
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    //calendar view below-------
+    CompactCalendarView compactCalendar;
+    private SimpleDateFormat dateFormatMonth = new SimpleDateFormat("MMM - yyyy", Locale.getDefault());
+    //------------------------------------
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
@@ -23,6 +44,37 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //CALENDAR CODES--------------------------------------------
+        final ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setTitle(null);
+
+        compactCalendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
+        compactCalendar.setUseThreeLetterAbbreviation(true);
+
+        Event ev1 = new Event(Color.RED, 1477040400000L, "Teachers' Professional Day");
+        compactCalendar.addEvent(ev1);
+
+        compactCalendar.setListener(new CompactCalendarView.CompactCalendarViewListener() {
+            @Override
+            public void onDayClick(Date dateClicked) {
+                Context context = getApplicationContext();
+                if (dateClicked.toString().compareTo("Fri Oct 21 00:00:00 AST 2016") == 0) {
+                    Toast.makeText(context, "Teachers' Professional Day", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(context, "No Events Planned for that day", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onMonthScroll(Date firstDayOfNewMonth) {
+                actionBar.setTitle(dateFormatMonth.format(firstDayOfNewMonth));
+            }
+        });
+
+        //END OF CALENDAR CODES------------------------------------------------
+
 
         //set the fragment initially
         MainFragment fragment = new MainFragment();
