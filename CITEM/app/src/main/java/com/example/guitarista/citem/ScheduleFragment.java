@@ -29,8 +29,8 @@ public class ScheduleFragment extends Fragment{
         MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
 
         materialCalendarView.state().edit()
-                .setFirstDayOfWeek(Calendar.WEDNESDAY)
-                .setMinimumDate(CalendarDay.from(2017, 1, 4))
+                .setFirstDayOfWeek(Calendar.SUNDAY)
+                .setMinimumDate(CalendarDay.from(1900, 1, 1))
                 .setMaximumDate(CalendarDay.from(2100, 12, 31))
                 .setCalendarDisplayMode(CalendarMode.MONTHS)
                 .commit();
@@ -38,7 +38,7 @@ public class ScheduleFragment extends Fragment{
         materialCalendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                Toast.makeText(getActivity(), "" + date, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Today is " + date, Toast.LENGTH_SHORT).show();
             }
         });
     return v;
