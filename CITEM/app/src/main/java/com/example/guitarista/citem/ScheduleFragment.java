@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,15 +41,15 @@ public class ScheduleFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState){
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false);
+        View v = inflater.inflate(R.layout.fragment_schedule, container, false);
 
-        final ActionBar actionBar =     getSupportActionBar();
+        final ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(false);
         actionBar.setTitle(null);
 
-        compactCalendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
+        compactCalendar = (CompactCalendarView) v.findViewById(R.id.compactcalendar_view);
         compactCalendar.setUseThreeLetterAbbreviation(true);
 
         Event ev1 = new Event(Color.RED, 1477040400000L, "Teachers' Professional Day");
@@ -57,11 +58,12 @@ public class ScheduleFragment extends Fragment {
         compactCalendar.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
             public void onDayClick(Date dateClicked) {
-                Context context = getApplicationContext();
+                Context c = getContext().getApplicationContext();
+
                 if (dateClicked.toString().compareTo("Fri Oct 21 00:00:00 AST 2016") == 0) {
-                    Toast.makeText(context, "Teachers' Professional Day", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(context, "No Events Planned for that day", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(c, "Teachers' Professional Day", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(c, "No Events Planned for that day", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -70,7 +72,7 @@ public class ScheduleFragment extends Fragment {
                 actionBar.setTitle(dateFormatMonth.format(firstDayOfNewMonth));
             }
         });
-
+    return v;
     }
 
 }
