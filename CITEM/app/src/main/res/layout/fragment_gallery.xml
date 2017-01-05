@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:padding="5dp"
+        tools:context="com.example.guitarista.citem.GalleryFragment">
 
-        <!--
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <GridView
+            android:layout_marginTop="72dp"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:text="?"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-        -->
-    <!--
-    <com.github.sundeepk.compactcalendarview.CompactCalendarView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/compactcalendar_view"
-        android:layout_width="fill_parent"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:layout_height="250dp"
-        app:compactCalendarTargetHeight="250dp"
-        app:compactCalendarTextSize="12sp"
-        app:compactCalendarBackgroundColor="#ffe95451"
-        app:compactCalendarTextColor="#fff"
-        app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
-        app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
-        app:compactCalendarMultiEventIndicatorColor="#fff"
-        />
-    -->
-
-
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:id="@+id/gridView"
+            android:columnWidth="100dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</ScrollView>

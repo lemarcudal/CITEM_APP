@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
+import android.widget.ListAdapter;
 
 
 public class MainActivity extends AppCompatActivity
@@ -32,6 +34,11 @@ public class MainActivity extends AppCompatActivity
 
 
         //END OF CALENDAR CODES------------------------------------------------
+
+        //GridView Gallery codes------------------------------
+        GridView gridView = (GridView) findViewById(R.id.gridView);
+        gridView.setAdapter((ListAdapter) new GalleryFragment());
+        //end of gallery codes--------------------------------
 
 
         //set the fragment initially
