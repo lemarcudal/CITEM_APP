@@ -30,8 +30,5 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'com.prolificinteractive:material-calendarview:1.4.2' //Material calendar view
-    compile 'com.github.sundeepk:compact-calendar-view:1.8.3'   //calendar view google
-    compile 'com.jakewharton:butterknife:7.0.1'
-
-
+    
 }

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -14,7 +15,9 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
 
+import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,7 +30,7 @@ public class ScheduleFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_schedule, container, false);
-
+        final TextView textView = (TextView)v.findViewById(R.id.textView);
         MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
 
         materialCalendarView.state().edit()
@@ -39,12 +42,12 @@ public class ScheduleFragment extends Fragment {
 
         materialCalendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
-            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+            public void onDateSelected(@NonNull MaterialCalendarView widget, CalendarDay date, boolean selected) {
                 Toast.makeText(getActivity(), "Today is " + date, Toast.LENGTH_SHORT).show();
+                //textView.setText("" + date);
             }
         });
         return v;
 
     }
-
 }
