@@ -10,5 +10,12 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
     -->
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:id="@+id/calendar1"
+        android:layout_marginBottom="120dp">
+    </CalendarView>
 
 </RelativeLayout>
