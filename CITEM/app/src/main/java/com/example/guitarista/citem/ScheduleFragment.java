@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.CalendarMode;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+
 
 import java.util.Calendar;
 
@@ -41,7 +43,8 @@ public class ScheduleFragment extends Fragment{
                 Toast.makeText(getActivity(), "Today is " + date, Toast.LENGTH_SHORT).show();
             }
         });
-    return v;
+        return v;
+
     }
 
 }
