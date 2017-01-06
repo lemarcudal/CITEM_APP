@@ -3,6 +3,7 @@ package com.example.guitarista.citem;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -19,7 +20,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class ExhibitorFragment extends AppCompatActivity {
+public class ExhibitorFragment extends Fragment {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -37,24 +38,25 @@ public class ExhibitorFragment extends AppCompatActivity {
     private ViewPager mViewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_exhibitor);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        getActivity().setTitle("GALLERY");
+        View v = inflater.inflate(R.layout.fragment_exhibitor, container, false);
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) v.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,16 +64,13 @@ public class ExhibitorFragment extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+        return v;
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_exhibitor, menu);
-        return true;
-    }
+
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
