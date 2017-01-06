@@ -51,7 +51,21 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        //code for navigation title----------------------
+        Menu menu = navigationView.getMenu();
+        MenuItem nav_home = menu.findItem(R.id.nav_gallery);
+
+        // set new title to the MenuItem
+        nav_home.setTitle("Home");
+
+        // do the same for other MenuItems
+        MenuItem nav_gallery = menu.findItem(R.id.nav_gallery);
+        nav_gallery.setTitle("My Gallery");
+
+        // add NavigationItemSelectedListener to check the navigation clicks
         navigationView.setNavigationItemSelectedListener(this);
+        //end of navigation title code-------------------
     }
 
     @Override
