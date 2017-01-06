@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity
         //END OF CALENDAR CODES------------------------------------------------
 
         //GridView Gallery codes------------------------------
-
         //end of gallery codes--------------------------------
 
 
