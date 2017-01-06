@@ -7,24 +7,12 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/ic_event_black_24dp"
-            android:title="Events and Conferences"/>
-        <item
-            android:id="@+id/nav_stories"
-            android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
-            android:title="Stories" />
-        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
-        <item
-            android:id="@+id/nav_schedule"
-            android:icon="@drawable/ic_date_range_black_24dp"
-            android:title="My Schedule" />
     </group>
 
-    <item android:title="Contact Manila FAME">
+    <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_about"
