@@ -7,6 +7,10 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
+            android:id="@+id/nav_exhib"
+            android:icon="@drawable/ic_local_atm_black_24dp"
+            android:title="Home" />
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
@@ -16,11 +20,11 @@
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/ic_contact_phone_black_24dp"
+                android:icon="@drawable/ic_group_black_24dp"
                 android:title="About Us" />
             <item
                 android:id="@+id/nav_contact"
-                android:icon="@drawable/ic_group_black_24dp"
+                android:icon="@drawable/ic_contact_phone_black_24dp"
                 android:title="Contact Us" />
         </menu>
     </item>

@@ -40,5 +40,7 @@
         Roxas Boulevard corner Sen. Gil J. Puyat Avenue,
         Pasay City 1300, PHILIPPINES
     </string>
+    <string name="title_activity_exhibitor_fragment">ExhibitorFragment</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>
