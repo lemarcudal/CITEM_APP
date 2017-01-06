@@ -11,17 +11,7 @@
         android:layout_height="match_parent"
         tools:context="com.example.guitarista.citem.MainFragment">
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:text="Contact Us"
-            android:textColor="@color/colorSecondaryText"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-            android:layout_marginTop="72dp"
-            android:id="@+id/textView1"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/imageView1"
-            android:layout_alignEnd="@+id/imageView1" />
+
 
         <ImageView
             android:layout_width="300dp"
@@ -30,7 +20,7 @@
             android:id="@+id/imageView1"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="61dp" />
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:layout_width="50dp"
@@ -117,7 +107,7 @@
             android:id="@+id/imageView2"
             android:layout_below="@+id/textView6"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp" />
+            android:layout_marginTop="21dp" />
 
     </RelativeLayout>
 
