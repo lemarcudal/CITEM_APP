@@ -4,15 +4,15 @@
     android:layout_height="190dp"
     android:background="@drawable/background_material_gray"
     android:orientation="vertical"
-
     >
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_image"
-        android:layout_width="60dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/custom_mf_logo"
+        android:src="@drawable/logo1"
+        app:border_color="#FF000000"
         android:layout_marginLeft="24dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"

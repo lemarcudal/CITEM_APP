@@ -7,9 +7,17 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/ic_event_black_24dp"
-            android:title="Events and Conferences"/>
+            android:id="@+id/nav_buyers"
+            android:icon="@drawable/ic_local_atm_black_24dp"
+            android:title="Buyers" />
+        <item
+            android:id="@+id/nav_exhib"
+            android:icon="@drawable/ic_shop_black_24dp"
+            android:title="Exhibitors" />
+        <item
+            android:id="@+id/nav_tradeShowHL"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Trade Show Highlights" />
         <item
             android:id="@+id/nav_stories"
             android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
@@ -19,19 +27,19 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
-            android:id="@+id/nav_schedule"
-            android:icon="@drawable/ic_date_range_black_24dp"
-            android:title="My Schedule" />
+            android:id="@+id/nav_tph"
+            android:icon="@drawable/ic_filter_hdr_black_24dp"
+            android:title="The Philippines" />
     </group>
 
-    <item android:title="Contact Manila FAME">
+    <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_about"
+                android:id="@+id/nav_share"
                 android:icon="@drawable/ic_contact_phone_black_24dp"
                 android:title="About Us" />
             <item
-                android:id="@+id/nav_contact"
+                android:id="@+id/nav_send"
                 android:icon="@drawable/ic_group_black_24dp"
                 android:title="Contact Us" />
         </menu>
