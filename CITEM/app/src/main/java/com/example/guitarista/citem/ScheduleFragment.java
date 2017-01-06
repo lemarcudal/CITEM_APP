@@ -31,7 +31,7 @@ public class ScheduleFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_schedule, container, false);
         final TextView textView = (TextView)v.findViewById(R.id.textView);
-        MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
+        final MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
 
         materialCalendarView.state().edit()
                 .setFirstDayOfWeek(Calendar.SUNDAY)
@@ -45,6 +45,9 @@ public class ScheduleFragment extends Fragment {
             public void onDateSelected(@NonNull MaterialCalendarView widget, CalendarDay date, boolean selected) {
                 Toast.makeText(getActivity(), "Today is " + date, Toast.LENGTH_SHORT).show();
                 //textView.setText("" + date);
+                if (materialCalendarView.getSelectedDate().equals(CalendarDay.from(2017, 0, 1))){
+                    Toast.makeText(getActivity(), "NEW YEAR!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         return v;

@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity
         //END OF CALENDAR CODES------------------------------------------------
 
         //GridView Gallery codes------------------------------
-        GridView gridView = (GridView) findViewById(R.id.gridView);
-        gridView.setAdapter((ListAdapter) new GalleryFragment());
+
         //end of gallery codes--------------------------------
 
 
