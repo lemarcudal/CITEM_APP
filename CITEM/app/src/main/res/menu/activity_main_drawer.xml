@@ -9,7 +9,7 @@
         <item
             android:id="@+id/nav_exhib"
             android:icon="@drawable/ic_local_atm_black_24dp"
-            android:title="Home" />
+            android:title="Exhibitors" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
