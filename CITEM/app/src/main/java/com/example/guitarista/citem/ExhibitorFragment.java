@@ -38,6 +38,7 @@ public class ExhibitorFragment extends Fragment{
         mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("Frag Tab2"),
                 TabLocalFragment.class, arg2);
 
+
         return mTabHost;
     }
 
