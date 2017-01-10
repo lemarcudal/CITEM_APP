@@ -13,12 +13,13 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  */
 public class ExhibitorFragment extends Fragment{
-    private FragmentTabHost mTabHost;
+
 
     public ExhibitorFragment() {
         // Required empty public constructor
     }
 
+    private FragmentTabHost mTabHost;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
