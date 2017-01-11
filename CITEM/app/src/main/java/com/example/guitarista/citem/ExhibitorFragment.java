@@ -36,19 +36,10 @@ public class ExhibitorFragment extends Fragment{
         Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
-        final int[] ICONS = new int[]{
-                R.drawable.ic_place_black_24dp,
-                R.drawable.ic_public_black_24dp,
-        };
-
         TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("International"));
         tabLayout.addTab(tabLayout.newTab().setText("Local"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        tabLayout.getTabAt(0).setIcon(ICONS[0]);
-        tabLayout.getTabAt(1).setIcon(ICONS[1]);
-        tabLayout.getTabAt(2).setIcon(ICONS[2]);
 
         final ViewPager viewPager = (ViewPager) v.findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter

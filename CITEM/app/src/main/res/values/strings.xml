@@ -40,6 +40,12 @@
         Roxas Boulevard corner Sen. Gil J. Puyat Avenue,
         Pasay City 1300, PHILIPPINES
     </string>
+    <string name="about_p1">
+        Considered as the country's premier design and lifestyle event, Manila FAME is a bi-annual showcase of craftsmanship, design innovation, and artisanship in Philippine products. It features finely selected furniture and home furnishings, holiday gifts and décor, and fashion accessories designed and crafted in the Philippines for the global market.
+    </string>
+    <string name="about_p2">
+        Manila FAME is organized by the Philippine Department of Trade and Industry (DTI), through the Center for International Trade Expositions and Missions (CITEM). It is the second longest-running trade show in the Asia-Pacific, and is the only trade event in the country that is approved by Union des Foires Internationales (UFI), or the Global Association of the Exhibition Industry, a Paris-based association of trade fair organizers founded 90 years ago in Milan, Italy in April 1925.
+    </string>
     <string name="title_activity_exhibitor_fragment">ExhibitorFragment</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
