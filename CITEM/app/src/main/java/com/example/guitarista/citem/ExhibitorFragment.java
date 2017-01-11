@@ -19,28 +19,32 @@ public class ExhibitorFragment extends Fragment{
         // Required empty public constructor
     }
 
-
+    private FragmentTabHost mTabHost;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FragmentTabHost mTabHost;
-        mTabHost = new FragmentTabHost(getActivity());
-        mTabHost.setup(getActivity(), getFragmentManager(), android.R.id.tabcontent);
 
-        mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("tab2"),
-                TabLocalFragment.class,null);
-        mTabHost.addTab(mTabHost.newTabSpec("tab2")
-                .setIndicator("tab2"), TabInternationalFragment.class, null);
+        mTabHost = new FragmentTabHost(getActivity());
+        mTabHost.setup(getActivity(), getChildFragmentManager(), R.layout.fragment_exhibitor);
+
+        //Bundle arg1 = new Bundle();
+        //arg1.putInt("Arg for frag1", 1);
+        mTabHost.addTab(mTabHost.newTabSpec("Tab 1").setIndicator("Frag tab1"),
+                TabInternationalFragment.class, null);
+        //Bundle arg2 = new Bundle();
+        //arg1.putInt("Arg for frag1", 2);
+        mTabHost.addTab(mTabHost.newTabSpec("Tab 2").setIndicator("Frag tab2"),
+                TabInternationalFragment.class, null);
 
 
         return mTabHost;
     }
 
-    //@Override
-    //public void onDestroyView() {
-    //    s uper.onDestroyView();
-    //    mTabHost = null;
-    //}
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mTabHost = null;
+    }
 
 }
