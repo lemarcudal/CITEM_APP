@@ -24,9 +24,11 @@ public class TabInternationalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_international, container, false);
-
-
+        View v = inflater.inflate(R.layout.fragment_tab_international, container, false);
+        TextView txt = (TextView) v.findViewById(R.id.textView);
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
+        txt.setTypeface(font);
+        return v;
     }
 
 }

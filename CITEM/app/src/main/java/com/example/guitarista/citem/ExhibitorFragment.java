@@ -33,8 +33,8 @@ public class ExhibitorFragment extends Fragment{
         getActivity().setTitle("Exhibitors");
         View v = inflater.inflate(R.layout.fragment_exhibitor, container, false);
 
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        //((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
         TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("International"));
