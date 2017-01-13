@@ -5,12 +5,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
- * Created by smdojt on 1/11/2017.
+ * Created by Guitarista on 13/01/2017.
  */
 
-public class PagerAdapter extends FragmentStatePagerAdapter{
+public class PagerAdapter_Attendees extends FragmentStatePagerAdapter {
     int mNumOfTabs;
-    public PagerAdapter(FragmentManager fm, int NumOfTabs) {
+
+    public PagerAdapter_Attendees(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -19,10 +20,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                TabInternationalFragment tab1 = new TabInternationalFragment();
+                TabAllFragment tab1 = new TabAllFragment();
                 return tab1;
             case 1:
-                TabLocalFragment tab2 = new TabLocalFragment();
+                TabVIPFragment tab2 = new TabVIPFragment();
                 return tab2;
             default:
                 return null;

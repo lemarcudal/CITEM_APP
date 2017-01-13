@@ -34,7 +34,7 @@ public class AttendeesFragment extends Fragment {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL); //check gravity center
 
         final ViewPager viewPager = (ViewPager) v.findViewById(R.id.pager);
-        final PagerAdapter adapter = new PagerAdapter(getFragmentManager(), tabLayout.getTabCount());
+        final PagerAdapter_Attendees adapter = new PagerAdapter_Attendees(getFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
