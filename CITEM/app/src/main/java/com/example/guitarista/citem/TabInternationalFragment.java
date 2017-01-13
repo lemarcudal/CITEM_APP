@@ -25,9 +25,6 @@ public class TabInternationalFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private RecyclerView recyclerView;
-    private ItemAdapter itemAdapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,27 +34,7 @@ public class TabInternationalFragment extends Fragment {
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
         txt.setTypeface(font);
 
-        ArrayList<ExhibitorInternational> itemList = new ArrayList<>();
-        fillDummyData(itemList);
-
-
-        recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
-
-        itemAdapter = new ItemAdapter(itemList);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(itemAdapter);
         return v;
     }
-
-    private void fillDummyData(ArrayList<ExhibitorInternational> itemList) {
-        ExhibitorInternational exInt1 = new ExhibitorInternational();
-        exInt1.setName("ABEEBA CORPORATION");
-        exInt1.setCathegory("FASHION");
-        exInt1.setProfilePhotoLocation("http://www.cgtutorials.com/oneadmin/_files/linksdir/9041_turn_the_low_quality_photos_to_high_quality.jpg");
-        itemList.add(exInt1);
-    }
-
 
 }

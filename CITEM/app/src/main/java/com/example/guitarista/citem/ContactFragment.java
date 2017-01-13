@@ -26,7 +26,7 @@ public class ContactFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         getActivity().setTitle("Contact Us");
-        View v = inflater.inflate(R.layout.fragment_tab_international, container, false);
+        View v = inflater.inflate(R.layout.fragment_contact, container, false);
         TextView txt1 = (TextView) v.findViewById(R.id.textView1);
         TextView txt2 = (TextView) v.findViewById(R.id.textView2);
         TextView txt3 = (TextView) v.findViewById(R.id.textView3);
@@ -34,7 +34,7 @@ public class ContactFragment extends Fragment {
         TextView txt5 = (TextView) v.findViewById(R.id.textView5);
         TextView txt6 = (TextView) v.findViewById(R.id.textView6);
         Typeface font1 = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
-        Typeface font2 = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
+        Typeface font2 = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_regular.ttf");
         txt1.setTypeface(font1);
         txt2.setTypeface(font2);
         txt3.setTypeface(font1);
