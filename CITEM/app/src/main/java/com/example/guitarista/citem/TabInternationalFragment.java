@@ -1,6 +1,5 @@
 package com.example.guitarista.citem;
 
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_local_atm_black_24dp"
             android:title="Exhibitors" />
         <item
+            android:id="@+id/nav_attend"
+            android:icon="@drawable/ic_people_outline_black_24dp"
+            android:title="Attendees"/>
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
