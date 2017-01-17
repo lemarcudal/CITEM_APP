@@ -34,6 +34,14 @@ public class TabInternationalFragment extends Fragment {
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
         txt.setTypeface(font);
 
+        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.my_recycler_view);
+
+        RecyclerAdapter adapter=new RecyclerAdapter(getActivity());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         return v;
     }
 
