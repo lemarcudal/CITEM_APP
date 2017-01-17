@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-
 /**
  * Created by smdojt on 1/17/2017.
  */
@@ -32,7 +31,6 @@ public class RecyclerAdapter extends  RecyclerView.Adapter<RecyclerViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-
         holder.tv1.setText(name[position]);
         holder.imageView.setOnClickListener(clickListener);
         holder.imageView.setTag(holder);
