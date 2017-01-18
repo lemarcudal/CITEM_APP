@@ -51,7 +51,7 @@ public class AttendeesFragment extends Fragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                
+
             }
         });
 
