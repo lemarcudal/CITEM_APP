@@ -5,11 +5,9 @@ import java.text.SimpleDateFormat;
 
 import android.graphics.Typeface;
 import android.icu.util.Calendar;
-import android.icu.util.TimeZone;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +19,7 @@ import com.prolificinteractive.materialcalendarview.CalendarMode;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
-import java.text.DateFormat;
-import java.util.Date;
+
 
 
 /**
@@ -46,14 +43,15 @@ public class ScheduleFragment extends Fragment {
         TextView tvDisplayD = (TextView) v.findViewById(R.id.textDate1);
         Typeface font1 = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
         Typeface font2 = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_regular.ttf");
-        //tvDisplayDate.setText(DateUtils.formatDateTime(getContext(), System.currentTimeMillis(), DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NUMERIC_DATE | DateUtils.FORMAT_12HOUR));
-        long date = System.currentTimeMillis();
 
+        //display date and time *CODE*
+        long date = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy / h:mm a");
         String dateString = sdf.format(date);
         tvDisplayDate.setText(dateString);
         tvDisplayDate.setTypeface(font2);
         tvDisplayD.setTypeface(font1);
+        //---------------------------
 
         final MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
         materialCalendarView.state().edit()
