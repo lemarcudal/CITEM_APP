@@ -6,21 +6,26 @@
     android:id="@+id/schedule_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingTop="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+
     tools:context="com.example.guitarista.citem.ScheduleFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="440dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view" />
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:gravity="center"
         app:mcv_showOtherDates="all"
         app:mcv_selectionColor="#f2e6ad"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="72dp"/>
 
 </RelativeLayout>
