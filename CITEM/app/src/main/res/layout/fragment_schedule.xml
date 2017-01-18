@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Today:"
+            android:text="Date and Time Today:"
             android:textSize="14dp"
             android:layout_marginTop="17dp"
             android:id="@+id/textDate1"
