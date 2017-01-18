@@ -30,9 +30,7 @@ public class TabInternationalFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_tab_international, container, false);
-        TextView txt = (TextView) v.findViewById(R.id.textView);
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "century_gothic_bold.ttf");
-        txt.setTypeface(font);
+
 
         return v;
     }
