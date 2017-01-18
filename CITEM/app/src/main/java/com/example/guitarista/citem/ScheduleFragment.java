@@ -37,11 +37,13 @@ public class ScheduleFragment extends Fragment {
         getActivity().setTitle("My Schedule");
         View v = inflater.inflate(R.layout.fragment_schedule, container, false);
 
-        TextView tvDisplayDate = (TextView) v.findViewById(R.id.textDate2);
-        long date = System.currentTimeMillis();
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
-        String dateString = sdf.format(date);
-        tvDisplayDate.setText(dateString);
+        TextView tv = (TextView) v.findViewById(R.id.textDate2);
+        SimpleDateFormat dfDate_day= new SimpleDateFormat("E, dd/MM/yyyy HH:mm:ss");
+        String dt="";
+        Calendar c = Calendar.getInstance();
+        String data = dfDate_day.format(c.getTime());
+        tv.setText(dt);
+        
 
         final MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
         materialCalendarView.state().edit()
