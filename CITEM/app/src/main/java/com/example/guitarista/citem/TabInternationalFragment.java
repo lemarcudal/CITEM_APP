@@ -53,7 +53,7 @@ public class TabInternationalFragment extends ListFragment {
         }
         String[] from={"Player", "Image"};
         int[] to = {R.id.nameTxt, R.id.imageView1};
-        adapter = new SimpleAdapter(getActivity(), data, R.layout.fragment_tab_international, from, to);
+        adapter = new SimpleAdapter(getActivity(), data, R.layout.model, from, to);
         setListAdapter(adapter);
         //--------------------------------------------
         return v;
@@ -68,7 +68,7 @@ public class TabInternationalFragment extends ListFragment {
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> av, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getActivity(), data.get(position).get("Player"), Toast.LENGTH_SHORT);
             }
         });
