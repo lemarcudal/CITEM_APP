@@ -4,14 +4,18 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,12 +24,12 @@ import java.util.HashMap;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabInternationalFragment extends Fragment {
+public class TabInternationalFragment extends ListFragment {
 
     String[] players={"Player1","Player2", "Player3"};
     int[] images = {R.drawable.custom_mf_logo,R.drawable.custom_mf_logo,R.drawable.custom_mf_logo};
 
-    ArrayList<HashMap<String, String>> data;
+    ArrayList<HashMap<String, String>> data=new ArrayList<HashMap<String, String>>() ;
     SimpleAdapter adapter;
 
     public TabInternationalFragment() {
@@ -53,7 +57,23 @@ public class TabInternationalFragment extends Fragment {
         setListAdapter(adapter);
         //--------------------------------------------
         return v;
+
+
     }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> av, View view, int position, long id) {
+                Toast.makeText(getActivity(), data.get(position).get("Player"), Toast.LENGTH_SHORT);
+            }
+        });
+    }
+
 
 
 }
