@@ -4,7 +4,24 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-
+    
+    <string-array name="Member_names">
+        <item>Robert</item>
+        <item>Rachael</item>
+        <item>Madeline</item>
+    </string-array>
+    
+    <array name="profile_pics">
+        <item>@drawable/custom_mf_logo</item>
+        <item>@drawable/custom_mf_logo</item>
+        <item>@drawable/custom_mf_logo</item>
+    </array>
+    
+    <string-array name="Status">
+        <item>Blogging</item>
+        <item>Available</item>
+        <item>Busy</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_with_paragraphs">
