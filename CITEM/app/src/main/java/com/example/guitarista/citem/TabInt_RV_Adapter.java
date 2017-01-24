@@ -18,6 +18,10 @@ import java.util.List;
 
 public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.ItemViewHolder> {
 
+    public TabInt_RV_Adapter(List<Exhibitors_Int> items) {
+        this.items = items;
+    }
+
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView itemName;
@@ -35,12 +39,11 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
 
     List<Exhibitors_Int> items;
     Context context;
-    TabInt_RV_Adapter(List<Exhibitors_Int> items) {
-        this.items = items;
-    }
-    TabInt_RV_Adapter(Context context) {
+    TabInt_RV_Adapter(List<Exhibitors_Int> items, Context context) {
+
         this.context = context;
     }
+
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
@@ -61,11 +64,11 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
         itemViewHolder.itemPhoto.setImageResource(items.get(i).photoId);
 
         ItemViewHolder.itemPhoto.setOnClickListener(new View.OnClickListener() {
-            public String position;
+
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Index position is: "+ position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Index position is: " + items, Toast.LENGTH_SHORT).show();
             }
         });
     }
