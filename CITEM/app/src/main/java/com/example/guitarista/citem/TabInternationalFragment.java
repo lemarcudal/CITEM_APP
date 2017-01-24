@@ -7,8 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +16,7 @@ import java.util.List;
  */
 public class TabInternationalFragment extends Fragment {
 
-    private List<Person> persons;
+    private List<Exhibitors_Int> items;
     private RecyclerView rv;
 
     public TabInternationalFragment() {
@@ -41,14 +39,14 @@ public class TabInternationalFragment extends Fragment {
     }
 
     private void initializeData() {
-        persons = new ArrayList<>();
-        persons.add(new Person("Emma Wilson", "23 years old", R.drawable.emma));
-        persons.add(new Person("Lavery Maiss", "25 years old", R.drawable.lavery));
-        persons.add(new Person("Lillie Watts", "35 years old", R.drawable.lillie));
+        items = new ArrayList<>();
+        items.add(new Exhibitors_Int("A. GARCIA CRAFTS", "FURNITURE", R.drawable.emma));
+        items.add(new Exhibitors_Int("BALEX BOXES", "HOLIDAY DECORATION", R.drawable.lavery));
+        items.add(new Exhibitors_Int("CAGAYAN DE ORO HANDMADE PAPER", "HOME DECOR/HOUSEWARE", R.drawable.lillie));
     }
 
     private void initializeAdapter(){
-        RVAdapter adapter = new RVAdapter(persons);
+        TabInt_RV_Adapter adapter = new TabInt_RV_Adapter(items);
         rv.setAdapter(adapter);
     }
 }
