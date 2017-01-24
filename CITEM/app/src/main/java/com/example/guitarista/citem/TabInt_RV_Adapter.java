@@ -1,5 +1,6 @@
 package com.example.guitarista.citem;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -32,9 +34,10 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
     }
 
     List<Exhibitors_Int> items;
-
-    TabInt_RV_Adapter(List<Exhibitors_Int> items) {
+    Context context;
+    TabInt_RV_Adapter(List<Exhibitors_Int> items, Context context) {
         this.items = items;
+        this.context = context;
     }
 
     @Override
@@ -54,6 +57,15 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
         itemViewHolder.itemName.setText(items.get(i).name);
         itemViewHolder.itemCathegory.setText(items.get(i).cathegory);
         itemViewHolder.itemPhoto.setImageResource(items.get(i).photoId);
+
+        itemViewHolder.itemPhoto.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String position = null;
+                Toast.makeText(context, "Index position is: " + position,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
