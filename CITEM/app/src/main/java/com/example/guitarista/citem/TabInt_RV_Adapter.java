@@ -22,7 +22,7 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
         CardView cv;
         TextView itemName;
         TextView itemCathegory;
-        ImageView itemPhoto;
+        static ImageView itemPhoto;
 
         ItemViewHolder(View itemView) {
             super(itemView);
@@ -35,8 +35,10 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
 
     List<Exhibitors_Int> items;
     Context context;
-    TabInt_RV_Adapter(List<Exhibitors_Int> items, Context context) {
+    TabInt_RV_Adapter(List<Exhibitors_Int> items) {
         this.items = items;
+    }
+    TabInt_RV_Adapter(Context context) {
         this.context = context;
     }
 
@@ -58,12 +60,12 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
         itemViewHolder.itemCathegory.setText(items.get(i).cathegory);
         itemViewHolder.itemPhoto.setImageResource(items.get(i).photoId);
 
-        itemViewHolder.itemPhoto.setOnClickListener(new View.OnClickListener() {
+        ItemViewHolder.itemPhoto.setOnClickListener(new View.OnClickListener() {
+            public String position;
 
             @Override
             public void onClick(View v) {
-                String position = null;
-                Toast.makeText(context, "Index position is: " + position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Index position is: "+ position, Toast.LENGTH_SHORT).show();
             }
         });
     }
