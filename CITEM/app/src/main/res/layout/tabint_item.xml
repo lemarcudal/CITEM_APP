@@ -31,7 +31,8 @@
             android:id="@+id/item_name"
             android:layout_toRightOf="@+id/item_photo"
             android:layout_alignParentTop="true"
-            android:textSize="30sp"
+            android:textSize="15sp"
+            android:textColor="#1c1c54"
             />
 
         <TextView
@@ -40,6 +41,8 @@
             android:id="@+id/item_cathegory"
             android:layout_toRightOf="@+id/item_photo"
             android:layout_below="@+id/item_name"
+            android:textSize="11sp"
+            android:textColor="#8585c6"
             />
 
     </RelativeLayout>
