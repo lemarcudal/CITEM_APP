@@ -1,38 +1,26 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.example.guitarista.citem.GalleryFragment">
 
-    <!-- TODO: Update blank fragment layout
-    <TextView
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-    -->
-    <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GALLERY"
-        android:padding="8dp"
-        android:textColor="#fff"
-        android:background="@color/colorPrimary"
-        android:textSize="28sp"
-        android:id="@+id/main_button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_android_black_24dp"
-        android:background="@drawable/button_shape"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        android:text="lemar"
-        android:layout_marginBottom="26dp"
-        android:id="@+id/imageButton"
-        android:layout_above="@+id/main_button"
-        android:layout_centerHorizontal="true" />
+    </android.support.design.widget.AppBarLayout>
 
-</RelativeLayout>
+    <include layout="@layout/content_main" />
+
+</android.support.design.widget.CoordinatorLayout>
