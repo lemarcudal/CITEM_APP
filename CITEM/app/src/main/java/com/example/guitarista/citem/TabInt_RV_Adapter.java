@@ -35,8 +35,8 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
 
     List<Exhibitors_Int> items;
     Context context;
-    TabInt_RV_Adapter(List<Exhibitors_Int> items) {
-
+    TabInt_RV_Adapter(List<Exhibitors_Int> items, Context context) {
+        this.context = context;
         this.items = items;
     }
 
@@ -54,7 +54,7 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
     }
 
     @Override
-    public void onBindViewHolder(ItemViewHolder itemViewHolder, int i) {
+    public void onBindViewHolder(ItemViewHolder itemViewHolder, final int i) {
         itemViewHolder.itemName.setText(items.get(i).name);
         itemViewHolder.itemCathegory.setText(items.get(i).cathegory);
         itemViewHolder.itemPhoto.setImageResource(items.get(i).photoId);
@@ -62,7 +62,15 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
         ItemViewHolder.itemPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Index position is: ", Toast.LENGTH_SHORT).show();
+                if (i == 1) {
+                    Toast.makeText(context, "Index position is 1", Toast.LENGTH_SHORT).show();
+                    //Intent intent = new Intent(MyActivity.this, NextActivity.class);
+                    //startActivity(intent);
+                }
+                else if (i == 2) {
+                    Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

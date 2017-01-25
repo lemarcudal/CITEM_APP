@@ -1,5 +1,6 @@
 package com.example.guitarista.citem;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -46,7 +47,7 @@ public class TabInternationalFragment extends Fragment {
     }
 
     private void initializeAdapter(){
-        TabInt_RV_Adapter adapter = new TabInt_RV_Adapter(items);
+        TabInt_RV_Adapter adapter = new TabInt_RV_Adapter(items, getContext());
         rv.setAdapter(adapter);
     }
 }
