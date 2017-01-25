@@ -1,6 +1,7 @@
 package com.example.guitarista.citem.Exhibitor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.guitarista.citem.R;
-
+import com.example.guitarista.citem.SplashScreen;
 import java.util.List;
 
 /**
@@ -65,9 +66,9 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
             @Override
             public void onClick(View v) {
                 if (i == 1) {
-                    Toast.makeText(context, "Index position is 1", Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent (context, SplashScreen.class);
-                    //context.startActivity(intent);
+                    //Toast.makeText(context, "Index position is 1", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent (context, SplashScreen.class);
+                    context.startActivity(intent);
                 }
                 else if (i == 2) {
                     Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();

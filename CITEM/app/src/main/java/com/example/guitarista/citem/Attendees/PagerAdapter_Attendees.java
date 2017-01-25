@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Attendees;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Attendees;
 
 import android.app.Activity;
 import android.widget.ArrayAdapter;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+
+import com.example.guitarista.citem.R;
+
 /**
  * Created by smdojt on 1/25/2017.
  */

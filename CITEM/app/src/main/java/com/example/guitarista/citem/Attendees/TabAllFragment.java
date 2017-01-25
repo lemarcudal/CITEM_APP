@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Attendees;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.List;
+import com.example.guitarista.citem.R;
+import com.example.guitarista.citem.SplashScreen;
 
 
 /**

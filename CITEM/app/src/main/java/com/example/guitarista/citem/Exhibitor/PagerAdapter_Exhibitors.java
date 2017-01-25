@@ -1,8 +1,9 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Exhibitor;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
 
 /**
  * Created by smdojt on 1/11/2017.

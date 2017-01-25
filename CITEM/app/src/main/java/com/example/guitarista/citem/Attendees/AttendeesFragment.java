@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Attendees;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,6 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.guitarista.citem.R;
 
 
 /**
