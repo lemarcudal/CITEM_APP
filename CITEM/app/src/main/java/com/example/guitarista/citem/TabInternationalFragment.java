@@ -3,6 +3,7 @@ package com.example.guitarista.citem;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,6 +33,8 @@ public class TabInternationalFragment extends Fragment {
         rv=(RecyclerView)v.findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);
+        //GridLayoutManager glm = new GridLayoutManager(getActivity(), 4);
+        //rv.setLayoutManager(glm);
         rv.setHasFixedSize(true);
 
         initializeData();
