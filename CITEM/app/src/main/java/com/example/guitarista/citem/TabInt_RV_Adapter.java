@@ -1,6 +1,7 @@
 package com.example.guitarista.citem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -20,8 +21,8 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView itemName;
-        TextView itemCathegory;
+        static TextView itemName;
+        static TextView itemCathegory;
         static ImageView itemPhoto;
 
         ItemViewHolder(View itemView) {
@@ -64,8 +65,8 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
             public void onClick(View v) {
                 if (i == 1) {
                     Toast.makeText(context, "Index position is 1", Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(MyActivity.this, NextActivity.class);
-                    //startActivity(intent);
+                    //Intent intent = new Intent (context, SplashScreen.class);
+                    //context.startActivity(intent);
                 }
                 else if (i == 2) {
                     Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();
