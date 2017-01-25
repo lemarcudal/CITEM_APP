@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Exhibitor;
 
 /**
  * Created by smdojt on 1/24/2017.

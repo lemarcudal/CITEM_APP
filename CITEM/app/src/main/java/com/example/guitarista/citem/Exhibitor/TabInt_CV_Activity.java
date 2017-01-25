@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Exhibitor;
 
 /**
  * Created by smdojt on 1/24/2017.
@@ -7,6 +7,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.guitarista.citem.R;
 
 public class TabInt_CV_Activity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Exhibitor;
 
 
 import android.os.Bundle;
@@ -14,6 +14,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.guitarista.citem.PagerAdapter_Exhibitors;
+import com.example.guitarista.citem.R;
 
 
 /**

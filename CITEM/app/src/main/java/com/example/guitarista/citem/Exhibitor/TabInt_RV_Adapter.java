@@ -1,7 +1,6 @@
-package com.example.guitarista.citem;
+package com.example.guitarista.citem.Exhibitor;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.guitarista.citem.R;
 
 import java.util.List;
 
