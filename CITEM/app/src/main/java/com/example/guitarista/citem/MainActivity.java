@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.example.guitarista.citem.Attendees.AttendeesFragment;
 import com.example.guitarista.citem.Exhibitor.ExhibitorFragment;
+import com.example.guitarista.citem.Gallery.GalleryFragment;
 
 
 public class MainActivity extends AppCompatActivity
