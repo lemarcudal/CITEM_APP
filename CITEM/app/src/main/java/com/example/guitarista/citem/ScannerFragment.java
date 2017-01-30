@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+import android.app.ActionBar;
+import android.view.MenuItem;
 
 
 /**
@@ -27,6 +29,9 @@ public class ScannerFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_scanner, container, false);
 
+        ActionBar ab = getActivity().getActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+
         v.findViewById(R.id.btnScan).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -37,5 +42,20 @@ public class ScannerFragment extends Fragment {
         });
         return v;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // app icon in action bar clicked; go home
+                Intent intent = new Intent(getActivity(), MainFragment.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 }
