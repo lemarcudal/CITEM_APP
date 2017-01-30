@@ -12,7 +12,8 @@
         <activity
             android:name=".MainActivity"
             android:label="MANILA FAME"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.example.guitarista.citem.MainActivity" />
 
