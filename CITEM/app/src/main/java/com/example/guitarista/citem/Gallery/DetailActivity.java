@@ -94,13 +94,13 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    //-----Code below are for 3 dotted line setting-------------
+    //@Override
+    //public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_detail, menu);
-        return true;
-    }
+    //    getMenuInflater().inflate(R.menu.menu_detail, menu);
+    //    return true;
+    //}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
