@@ -73,7 +73,7 @@ public class GalleryFragment extends Fragment {
         mAdapter = new GalleryAdapter(getActivity(), data);
         mRecyclerView.setAdapter(mAdapter);
 
-        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(),
                 new RecyclerItemClickListener.OnItemClickListener() {
 
                     @Override
