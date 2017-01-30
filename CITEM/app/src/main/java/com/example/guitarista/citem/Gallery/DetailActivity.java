@@ -22,6 +22,8 @@ import com.example.guitarista.citem.R;
 
 import java.util.ArrayList;
 
+//import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class DetailActivity extends AppCompatActivity {
 
     /**
@@ -36,6 +38,8 @@ public class DetailActivity extends AppCompatActivity {
 
     public ArrayList<ImageModel> data = new ArrayList<>();
     int pos;
+
+
 
     Toolbar toolbar;
 
@@ -190,6 +194,7 @@ public class DetailActivity extends AppCompatActivity {
             super.onStart();
 
         }
+        //PhotoViewAttacher mAttacher;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -197,6 +202,7 @@ public class DetailActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
 
             final ImageView imageView = (ImageView) rootView.findViewById(R.id.detail_image);
+        //    mAttacher = new PhotoViewAttacher(imageView);
 
             Glide.with(getActivity()).load(url).thumbnail(0.1f).into(imageView);
 
