@@ -52,7 +52,6 @@ public class ScheduleFragment extends Fragment {
         tvDisplayDate.setTypeface(font2);
         tvDisplayD.setTypeface(font1);
         //---------------------------
-
         final MaterialCalendarView materialCalendarView = (MaterialCalendarView) v.findViewById(R.id.calendarView);
         materialCalendarView.state().edit()
                 .setFirstDayOfWeek(Calendar.MONDAY)
@@ -70,6 +69,9 @@ public class ScheduleFragment extends Fragment {
                 }
                 else if (materialCalendarView.getSelectedDate().equals(CalendarDay.from(2017, 1, 14))) {
                     Toast.makeText(getActivity(), "Happy Valentines Day!", Toast.LENGTH_SHORT).show();
+                }
+                else if (materialCalendarView.getSelectedDate().equals(CalendarDay.from(2017, 0, 28))) {
+                    Toast.makeText(getActivity(), "Chinese New Year!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
