@@ -1,4 +1,4 @@
-package com.example.guitarista.citem.Gallery;
+package com.example.guitarista.citem.TabGallery.Gallery;
 
 /**
  * Created by smdojt on 1/27/2017.
@@ -11,7 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;

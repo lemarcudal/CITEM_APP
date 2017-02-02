@@ -1,4 +1,4 @@
-package com.example.guitarista.citem.Gallery;
+package com.example.guitarista.citem.TabGallery.Gallery;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,13 +47,13 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setTitle("GALLERY");
+        //getActivity().setTitle("GALLERY");
         View v = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         for (int i = 0; i < IMGS.length; i++) {
 
             ImageModel imageModel = new ImageModel();
-            imageModel.setName("Image " + i);
+            imageModel.setName("Spring Forward Photo " + i);
             imageModel.setUrl(IMGS[i]);
             data.add(imageModel);
 
