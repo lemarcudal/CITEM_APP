@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.guitarista.citem.TabGallery.Gallery.GalleryFragment;
+import com.example.guitarista.citem.Gallery.GalleryFragment;
 import com.example.guitarista.citem.R;
 
 /**
