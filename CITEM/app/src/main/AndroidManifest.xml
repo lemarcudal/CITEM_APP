@@ -19,6 +19,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".SplashScreen"
@@ -32,7 +33,6 @@
         <activity
             android:name=".Gallery_SpringForward.DetailActivity">
         </activity>
-
         <activity
             android:name=".ExhibitorFragment"
             android:label="@string/title_activity_exhibitor_fragment"
