@@ -16,10 +16,10 @@ import com.example.guitarista.citem.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabGallery extends Fragment {
+public class TabGallery1 extends Fragment {
 
 
-    public TabGallery() {
+    public TabGallery1() {
         // Required empty public constructor
     }
 
@@ -53,7 +53,7 @@ public class TabGallery extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tab_gallery, container, false);
 
         CustomList adapter = new
-                CustomList(TabGallery.this.getActivity(), AllGalleries, imageID);
+                CustomList(TabGallery1.this.getActivity(), AllGalleries, imageID);
         list = (ListView) v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

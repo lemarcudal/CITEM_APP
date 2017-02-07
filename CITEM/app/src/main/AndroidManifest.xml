@@ -33,9 +33,6 @@
             android:name=".TabGallery.Gallery.DetailActivity"
             android:label="@string/title_activity_detail">
         </activity>
-        <activity android:name=".TabGallery.Gallery.GalleryFragment"
-            android:label="GalleryFragment">
-        </activity>
 
         <activity
             android:name=".ExhibitorFragment"
