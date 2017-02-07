@@ -28,7 +28,7 @@ public class AttendeesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         getActivity().setTitle("Attendees");
-        View v = inflater.inflate(R.layout.fragment_attendees, container, false);
+        View v = inflater.inflate(R.layout.layoutAttendees.fragment_attendees, container, false);
 
         TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("All"));

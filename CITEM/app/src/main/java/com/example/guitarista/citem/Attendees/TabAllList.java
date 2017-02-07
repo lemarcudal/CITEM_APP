@@ -21,7 +21,7 @@ public class TabAllList extends ArrayAdapter<String>{
     private final int[] imageId;
     public TabAllList(Activity context,
                       String[] AllAttendess, int[] imageId) {
-        super(context, R.layout.attall_list_single, AllAttendess);
+        super(context, R.layout.layoutAttendees.attall_list_single, AllAttendess);
         this.context = context;
         this.AllAttendees = AllAttendess;
         this.imageId = imageId;
@@ -30,7 +30,7 @@ public class TabAllList extends ArrayAdapter<String>{
     @Override
     public View getView(int position, View view, ViewGroup parent){
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.attall_list_single, null, true);
+        View rowView = inflater.inflate(R.layout.fragment_attendees_attall_list_single, null, true);
         TextView txtName = (TextView) rowView.findViewById(R.id.txtName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
         txtName.setText(AllAttendees[position]);

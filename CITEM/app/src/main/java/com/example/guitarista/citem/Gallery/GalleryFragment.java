@@ -1,4 +1,4 @@
-package com.example.guitarista.citem.TabGallery.Gallery;
+package com.example.guitarista.citem.Gallery;
 
 import android.content.Intent;
 import android.os.Bundle;
