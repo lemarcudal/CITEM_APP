@@ -25,7 +25,7 @@ public class TabLocalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_local, container, false);
+        return inflater.inflate(R.layout.fragment_exhibitor_tab_local, container, false);
     }
 
 }

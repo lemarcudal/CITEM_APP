@@ -21,7 +21,7 @@ public class TabAllList extends ArrayAdapter<String>{
     private final int[] imageId;
     public TabAllList(Activity context,
                       String[] AllAttendess, int[] imageId) {
-        super(context, R.layout.layoutAttendees.attall_list_single, AllAttendess);
+        super(context, R.layout.fragment_attendees_attall_list_single, AllAttendess);
         this.context = context;
         this.AllAttendees = AllAttendess;
         this.imageId = imageId;

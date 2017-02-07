@@ -20,7 +20,7 @@ public class TabInt_CV_Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.tabint_cv_activity);
+        setContentView(R.layout.fragment_exhibitor_tabint_cv_activity);
         itemName = (TextView)findViewById(R.id.item_name);
         itemCathegory = (TextView)findViewById(R.id.item_cathegory);
         itemPhoto = (ImageView)findViewById(R.id.item_photo);

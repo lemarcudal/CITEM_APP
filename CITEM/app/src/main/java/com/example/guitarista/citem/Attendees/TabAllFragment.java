@@ -46,7 +46,7 @@ public class TabAllFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.layoutAttendees.fragment_tab_all, container, false);
+        View v = inflater.inflate(R.layout.fragment_attendees_tab_all, container, false);
 
         TabAllList adapter = new
                 TabAllList(TabAllFragment.this.getActivity(), AllAttendees, imageID);

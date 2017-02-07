@@ -28,7 +28,7 @@ public class TabInternationalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_tab_international, container, false);
+        View v = inflater.inflate(R.layout.fragment_exhibitor_tab_international, container, false);
 
         rv=(RecyclerView)v.findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
