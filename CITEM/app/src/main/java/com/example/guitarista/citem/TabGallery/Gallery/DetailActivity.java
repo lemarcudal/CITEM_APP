@@ -1,4 +1,4 @@
-package com.example.guitarista.citem.Gallery;
+package com.example.guitarista.citem.TabGallery.Gallery;
 
 /**
  * Created by smdojt on 1/27/2017.

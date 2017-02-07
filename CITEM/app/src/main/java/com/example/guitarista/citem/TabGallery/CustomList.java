@@ -20,10 +20,10 @@ public class CustomList extends ArrayAdapter<String> {
     private final String[] AllGalleries;
     private final int[] imageId;
     public CustomList(Activity context,
-                      String[] AllAttendess, int[] imageId) {
-            super(context, R.layout.fragment_tab_gallery_list, AllAttendess);
+                      String[] AllGalleries, int[] imageId) {
+            super(context, R.layout.fragment_tab_gallery_list, AllGalleries);
             this.context = context;
-            this.AllGalleries = AllAttendess;
+            this.AllGalleries = AllGalleries;
             this.imageId = imageId;
             }
 
