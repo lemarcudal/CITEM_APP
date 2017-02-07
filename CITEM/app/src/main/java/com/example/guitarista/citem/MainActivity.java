@@ -11,8 +11,7 @@ import android.view.MenuItem;
 
 import com.example.guitarista.citem.Attendees.AttendeesFragment;
 import com.example.guitarista.citem.Exhibitor.ExhibitorFragment;
-import com.example.guitarista.citem.Gallery.GalleryFragment;
-import com.example.guitarista.citem.TabGallery.TabGallery1;
+import com.example.guitarista.citem.TabGallery.TabGallery;
 
 
 public class MainActivity extends AppCompatActivity
@@ -107,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            GalleryFragment fragment = new GalleryFragment();
+            TabGallery fragment = new TabGallery();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);

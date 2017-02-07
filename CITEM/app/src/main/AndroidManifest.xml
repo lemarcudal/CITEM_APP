@@ -30,8 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Gallery.DetailActivity"
-            android:label="@string/title_activity_detail">
+            android:name=".Gallery_SpringForward.DetailActivity">
         </activity>
 
         <activity

@@ -1,12 +1,10 @@
-package com.example.guitarista.citem.Gallery;
+package com.example.guitarista.citem.Gallery_SpringForward;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +45,7 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //getActivity().setTitle("GALLERY");
+        getActivity().setTitle("Gallery");
         View v = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         for (int i = 0; i < IMGS.length; i++) {
@@ -59,8 +57,9 @@ public class GalleryFragment extends Fragment {
 
         }
 
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        //((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        //Removing the comment for code above will set the Tab.setTitle to "GALLERY" on all fragment.
 
         mRecyclerView = (RecyclerView) v.findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));

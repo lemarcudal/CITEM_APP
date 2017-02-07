@@ -1,24 +1,25 @@
 package com.example.guitarista.citem.TabGallery;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.guitarista.citem.Gallery.GalleryFragment;
+import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TabGallery1 extends Fragment {
+public class TabGallery extends Fragment {
 
 
-    public TabGallery1() {
+    public TabGallery() {
         // Required empty public constructor
     }
 
@@ -52,7 +53,7 @@ public class TabGallery1 extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tab_gallery, container, false);
 
         CustomList adapter = new
-                CustomList(TabGallery1.this.getActivity(), AllGalleries, imageID);
+                CustomList(TabGallery.this.getActivity(), AllGalleries, imageID);
         list = (ListView) v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,8 +61,13 @@ public class TabGallery1 extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent intent = new Intent(getActivity(), GalleryFragment.class);
-                    startActivity(intent);
+                    GalleryFragment fr = new GalleryFragment();
+                    Bundle args = new Bundle();
+                    fr.setArguments(args);
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container, fr);
+                    fragmentTransaction.commit();
                 }
             }
         });

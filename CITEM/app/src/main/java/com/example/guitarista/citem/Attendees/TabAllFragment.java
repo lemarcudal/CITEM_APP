@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.R;
-import com.example.guitarista.citem.SplashScreen;
 
 
 /**
@@ -57,7 +57,7 @@ public class TabAllFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent intent = new Intent(getActivity(), SplashScreen.class);
+                    Intent intent = new Intent(getActivity(), GalleryFragment.class);
                     startActivity(intent);
                 }
             }
