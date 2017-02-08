@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity
     //    }
     //}
 
-
-
     // New Back pressed below
     boolean doubleBackToExitPressedOnce = false;
     @Override
