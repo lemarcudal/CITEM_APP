@@ -1,6 +1,5 @@
 package com.example.guitarista.citem.TabGallery;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.guitarista.citem.Gallery_activity.GalleryFragment;
-//import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
+import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.R;
 
 /**
@@ -63,13 +61,23 @@ public class TabGallery extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                  if (position == 0) {
-                    Intent intent = new Intent(getActivity(), GalleryFragment.class);
-                    startActivity(intent);
+                     GalleryFragment fr = new GalleryFragment();
+                     Bundle args = new Bundle();
+                     fr.setArguments(args);
+                     FragmentManager fm = getFragmentManager();
+                     FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                     fragmentTransaction.replace(R.id.fragment_container, fr);
+                     fragmentTransaction.addToBackStack(null);
+                     fragmentTransaction.commit();
                 }
             }
+
+
         });
 
         return v;
     }
+
+
 
 }

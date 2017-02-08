@@ -13,13 +13,15 @@
             android:name=".MainActivity"
             android:label="MANILA FAME"
             android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTask">
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="com.example.guitarista.citem.MainActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.guitarista.citem.MainActivity"/>
         </activity>
         <activity
             android:name=".SplashScreen"

@@ -1,6 +1,8 @@
 package com.example.guitarista.citem;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -58,17 +60,46 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-    //default back pressed / New Back pressed below
+
+    //default back pressed
+    //@Override
+    //public void onBackPressed() {
+    //    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    //    if (drawer.isDrawerOpen(GravityCompat.END))
+    //    {
+    //        drawer.closeDrawer(GravityCompat.START);
+    //    }
+    //    else
+    //    {
+    //        super.onBackPressed();
+    //    }
+    //}
+
+
+
+    // New Back pressed below
+    boolean doubleBackToExitPressedOnce = false;
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-           drawer.closeDrawer(GravityCompat.START);
+        //Checking for fragment count on backstack
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
+        } else if (!doubleBackToExitPressedOnce) {
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this,"Press again to exit.", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
         } else {
             super.onBackPressed();
+            return;
         }
     }
-
 
 
     //----------------The code below displays the 3 dotted settings in the upper right of action bar-----------
@@ -106,6 +137,7 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
@@ -113,6 +145,7 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_about) {
@@ -120,6 +153,7 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_contact) {
@@ -127,30 +161,35 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         } else if (id == R.id.nav_exhib) {
             ExhibitorFragment fragment = new ExhibitorFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         } else if (id == R.id.nav_attend) {
             AttendeesFragment fragment = new AttendeesFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         } else if (id == R.id.nav_sched) {
             ScheduleFragment fragment= new ScheduleFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         } else if (id == R.id.nav_scanner) {
             ScannerFragment fragment = new ScannerFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
