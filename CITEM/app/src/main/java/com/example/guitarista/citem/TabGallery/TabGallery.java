@@ -1,15 +1,19 @@
 package com.example.guitarista.citem.TabGallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.guitarista.citem.AboutFragment;
 import com.example.guitarista.citem.ContactFragment;
 import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.R;
@@ -18,7 +22,6 @@ import com.example.guitarista.citem.R;
  * A simple {@link Fragment} subclass.
  */
 public class TabGallery extends Fragment {
-
 
     public TabGallery() {
         // Required empty public constructor
@@ -53,7 +56,6 @@ public class TabGallery extends Fragment {
             R.drawable.image6,
             R.drawable.image7
     };
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -91,10 +93,7 @@ public class TabGallery extends Fragment {
                     fragmentTransaction.commit();
                 }
             }
-
-
         });
-
         return v;
     }
 
