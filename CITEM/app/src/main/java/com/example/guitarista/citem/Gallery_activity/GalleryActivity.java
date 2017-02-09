@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-
 import com.example.guitarista.citem.R;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
  * Created by smdojt on 2/7/2017.
  */
 
-public class GalleryFragment extends AppCompatActivity {
+public class GalleryActivity extends AppCompatActivity {
 
     GalleryAdapter mAdapter;
     RecyclerView mRecyclerView;
@@ -59,7 +58,7 @@ public class GalleryFragment extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
 
 
-        mAdapter = new GalleryAdapter(GalleryFragment.this, data);
+        mAdapter = new GalleryAdapter(this, data);
         mRecyclerView.setAdapter(mAdapter);
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
@@ -68,7 +67,7 @@ public class GalleryFragment extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int position) {
 
-                        Intent intent = new Intent(GalleryFragment.this, DetailActivity.class);
+                        Intent intent = new Intent(GalleryActivity.this, DetailActivity.class);
                         intent.putParcelableArrayListExtra("data", data);
                         intent.putExtra("pos", position);
                         startActivity(intent);

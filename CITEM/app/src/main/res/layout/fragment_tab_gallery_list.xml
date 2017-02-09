@@ -18,14 +18,19 @@
 
         <TextView
             android:id="@+id/txtName"
-
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/img"
             android:layout_alignParentTop="true"
             android:textSize="15sp"/>
-
     </TableRow>
+    <TextView
+        android:id="@+id/txtSubName"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"/>
 </RelativeLayout>

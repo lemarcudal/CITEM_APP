@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.guitarista.citem.ContactFragment;
 import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.R;
 
@@ -33,6 +34,15 @@ public class TabGallery extends Fragment {
             "Wordpress",
             "Drupal"
     };
+    String[] AllGalleriesSub = {
+            "Manila Fame",
+            "Citem 1",
+            "Citem 2",
+            "Citem 3",
+            "Citem 4",
+            "Citem 5",
+            "Citem 6"
+    };
 
     int[] imageID = {
             R.drawable.image1,
@@ -53,7 +63,7 @@ public class TabGallery extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tab_gallery, container, false);
 
         CustomList adapter = new
-                CustomList(TabGallery.this.getActivity(), AllGalleries, imageID);
+                CustomList(TabGallery.this.getActivity(), AllGalleries, AllGalleriesSub, imageID);
         list = (ListView) v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -69,6 +79,16 @@ public class TabGallery extends Fragment {
                      fragmentTransaction.replace(R.id.fragment_container, fr);
                      fragmentTransaction.addToBackStack(null);
                      fragmentTransaction.commit();
+                }
+                if (position == 1) {
+                    ContactFragment fr = new ContactFragment();
+                    Bundle args = new Bundle();
+                    fr.setArguments(args);
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container, fr);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
                 }
             }
 

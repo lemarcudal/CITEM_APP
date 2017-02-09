@@ -18,12 +18,14 @@ public class CustomList extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] AllGalleries;
+    private final String[] AllGalleriesSub;
     private final int[] imageId;
     public CustomList(Activity context,
-                      String[] AllGalleries, int[] imageId) {
+                      String[] AllGalleries, String[] AllGalleriesSub, int[] imageId) {
             super(context, R.layout.fragment_tab_gallery_list, AllGalleries);
             this.context = context;
             this.AllGalleries = AllGalleries;
+            this.AllGalleriesSub = AllGalleriesSub;
             this.imageId = imageId;
             }
 
@@ -32,8 +34,10 @@ public class CustomList extends ArrayAdapter<String> {
             LayoutInflater inflater = context.getLayoutInflater();
             View rowView = inflater.inflate(R.layout.fragment_tab_gallery_list, null, true);
             TextView txtName = (TextView) rowView.findViewById(R.id.txtName);
+            TextView txtSubName = (TextView) rowView.findViewById(R.id.txtSubName);
             ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
             txtName.setText(AllGalleries[position]);
+            txtSubName.setText(AllGalleriesSub[position]);
             imageView.setImageResource(Integer.parseInt(String.valueOf(imageId[position])));
             return rowView;
             } {
