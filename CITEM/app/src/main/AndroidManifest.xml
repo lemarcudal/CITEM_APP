@@ -33,7 +33,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Gallery_SpringForward.DetailActivity">
+            android:name=".Gallery_activity.DetailActivity">
+        </activity>
+        <activity
+            android:name=".Gallery_activity.GalleryActivity">
         </activity>
         <activity
             android:name=".ExhibitorFragment"

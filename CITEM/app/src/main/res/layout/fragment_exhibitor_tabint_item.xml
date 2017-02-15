@@ -8,17 +8,19 @@
     card_view:cardCornerRadius="4dp"
     android:layout_gravity="center"
     android:id="@+id/cv"
+    android:clickable="true"
+    android:foreground="@drawable/custom_bg"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="16dp"
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/item_photo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
