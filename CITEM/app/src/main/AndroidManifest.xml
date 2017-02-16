@@ -39,6 +39,10 @@
             android:name=".Gallery_activity.GalleryActivity">
         </activity>
         <activity
+            android:name=".Gallery_SpringForward.DetailActivity">
+
+        </activity>
+        <activity
             android:name=".ExhibitorFragment"
             android:label="@string/title_activity_exhibitor_fragment"
             android:theme="@style/AppTheme">

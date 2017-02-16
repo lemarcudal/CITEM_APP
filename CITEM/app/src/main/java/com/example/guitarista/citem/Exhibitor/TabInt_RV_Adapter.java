@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -24,6 +25,8 @@ import com.example.guitarista.citem.Gallery_activity.GalleryActivity;
 import com.example.guitarista.citem.R;
 import com.example.guitarista.citem.SplashScreen;
 import java.util.List;
+
+import static com.example.guitarista.citem.R.id.view;
 
 /**
  * Created by smdojt on 1/24/2017.
@@ -82,7 +85,10 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
                     context.startActivity(intent);
                 }
                 else if (i == 2) {
-                    Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();
+                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                    GalleryFragment gf = new GalleryFragment();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, gf).addToBackStack(null).commit();
                 }
 
             }
