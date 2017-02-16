@@ -29,4 +29,5 @@ public class TabInt_CV_Activity extends Activity {
         itemCathegory.setText("Manila Fame");
         itemPhoto.setImageResource(R.drawable.emma);
     }
+
 }

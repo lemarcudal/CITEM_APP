@@ -2,11 +2,6 @@ package com.example.guitarista.citem.Exhibitor;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
@@ -15,18 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 
 import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.Gallery_activity.GalleryActivity;
 import com.example.guitarista.citem.R;
-import com.example.guitarista.citem.SplashScreen;
 import java.util.List;
 
-import static com.example.guitarista.citem.R.id.view;
+
 
 /**
  * Created by smdojt on 1/24/2017.
@@ -36,9 +26,9 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         static CardView cv;
-        static TextView itemName;
-        static TextView itemCathegory;
-        static ImageView itemPhoto;
+        TextView itemName;
+        TextView itemCathegory;
+        ImageView itemPhoto;
 
         ItemViewHolder(View itemView) {
             super(itemView);

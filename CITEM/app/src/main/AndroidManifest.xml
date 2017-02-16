@@ -12,16 +12,17 @@
         <activity
             android:name=".MainActivity"
             android:label="MANILA FAME"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.example.guitarista.citem.MainActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.guitarista.citem.MainActivity"/>
+                android:value="com.example.guitarista.citem.MainActivity" />
         </activity>
         <activity
             android:name=".SplashScreen"
@@ -32,26 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Gallery_activity.DetailActivity">
-        </activity>
-        <activity
-            android:name=".Gallery_activity.GalleryActivity">
-        </activity>
-        <activity
-            android:name=".Gallery_SpringForward.DetailActivity">
-
-        </activity>
+        <activity android:name=".Gallery_activity.DetailActivity" />
+        <activity android:name=".Gallery_activity.GalleryActivity" />
+        <activity android:name=".Gallery_SpringForward.DetailActivity" />
         <activity
             android:name=".ExhibitorFragment"
             android:label="@string/title_activity_exhibitor_fragment"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
     </application>
-
-
-
-
 
 </manifest>

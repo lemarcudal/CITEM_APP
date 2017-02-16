@@ -16,6 +16,7 @@ import android.widget.ListView;
 import com.example.guitarista.citem.AboutFragment;
 import com.example.guitarista.citem.ContactFragment;
 import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
+import com.example.guitarista.citem.Gallery_activity.GalleryActivity;
 import com.example.guitarista.citem.R;
 
 /**
@@ -83,14 +84,8 @@ public class TabGallery extends Fragment {
                      fragmentTransaction.commit();
                 }
                 if (position == 1) {
-                    ContactFragment fr = new ContactFragment();
-                    Bundle args = new Bundle();
-                    fr.setArguments(args);
-                    FragmentManager fm = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, fr);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                    Intent intent = new Intent (getContext(), GalleryActivity.class);
+                    getContext().startActivity(intent);
                 }
             }
         });

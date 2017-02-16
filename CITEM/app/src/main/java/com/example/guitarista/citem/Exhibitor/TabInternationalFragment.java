@@ -52,5 +52,7 @@ public class TabInternationalFragment extends Fragment {
     private void initializeAdapter(){
         TabInt_RV_Adapter adapter = new TabInt_RV_Adapter(items, getContext());
         rv.setAdapter(adapter);
+
     }
+
 }

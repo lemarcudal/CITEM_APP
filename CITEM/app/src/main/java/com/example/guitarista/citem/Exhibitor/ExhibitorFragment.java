@@ -18,7 +18,7 @@ import com.example.guitarista.citem.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ExhibitorFragment extends Fragment{
+public class ExhibitorFragment extends Fragment {
 
 
     public ExhibitorFragment() {
@@ -79,7 +79,4 @@ public class ExhibitorFragment extends Fragment{
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
 }
