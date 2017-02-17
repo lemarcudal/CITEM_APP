@@ -2,40 +2,54 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.guitarista.citem">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Enable Internet Connection for Image retrieval in
+                                                                        Gallery Tab-->
+    <!-- List of specific class declaration (Depending on usage) -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- MainActivity Class code below;
+             Main PARENT Code;
+             SingleTop Enabled for full backstack implementation-->
         <activity
             android:name=".MainActivity"
             android:label="MANILA FAME"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="com.example.guitarista.citem.MainActivity" />
-
                 <category android:name="android.intent.category.DEFAULT" />
+                <!-- DEFAULT Launching activity / Interface after Splashscreen -->
             </intent-filter>
-
+            <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.guitarista.citem.MainActivity" />
         </activity>
+        <!-- Splashscreen Implementation below -->
         <activity
             android:name=".SplashScreen"
             android:label="MANILA FAME">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- LAUNCHING Activity -->
             </intent-filter>
         </activity>
-        <activity android:name=".Gallery_activity.DetailActivity" />
-        <activity android:name=".Gallery_activity.GalleryActivity" />
-        <activity android:name=".Gallery_SpringForward.DetailActivity" />
+        <!-- DETAILACTIVITY Implementaion for GalleryFragment
+        ** DO NOT DELETE else Gallery retrieval wont work -->
+        <activity
+            android:name=".Gallery_SpringForward.DetailActivity">
+        </activity>
+        <activity
+            android:name=".sample1"
+            android:parentActivityName="com.example.guitarista.citem.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.guitarista.citem.MainActivity" />
+        </activity>
+        <!-- Generated code for Exhibitor Drawer (Tabs) -->
         <activity
             android:name=".ExhibitorFragment"
             android:label="@string/title_activity_exhibitor_fragment"

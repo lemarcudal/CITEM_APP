@@ -39,7 +39,7 @@ public class GalleryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_gallery);
-
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         for (int i = 0; i < IMGS.length; i++) {
 
             ImageModel imageModel = new ImageModel();

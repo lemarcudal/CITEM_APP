@@ -55,4 +55,10 @@ public class TabInternationalFragment extends Fragment {
 
     }
 
+    @Override
+    public void onResume() {
+        initializeData();
+        initializeAdapter();
+        super.onResume();
+    }
 }

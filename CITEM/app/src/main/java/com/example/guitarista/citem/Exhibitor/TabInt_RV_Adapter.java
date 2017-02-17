@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.example.guitarista.citem.Gallery_SpringForward.GalleryFragment;
 import com.example.guitarista.citem.Gallery_activity.GalleryActivity;
 import com.example.guitarista.citem.R;
+import com.example.guitarista.citem.sample1;
+
 import java.util.List;
 
 
@@ -71,14 +73,20 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
             public void onClick(View v) {
                 if (i == 1) {
                     //Toast.makeText(context, "Index position is 1", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent (context, GalleryActivity.class);
+                    Intent intent = new Intent (context, sample1.class);
                     context.startActivity(intent);
+
+//                    Using this code specifically for activity will make backstack automatically generated:
+//                    meaning, the cardviews w/ recyclerviewer in the tab before will remain intack.
                 }
                 else if (i == 2) {
                     //Toast.makeText(context, "Index position is 2 ", Toast.LENGTH_SHORT).show();
                     AppCompatActivity activity = (AppCompatActivity) v.getContext();
                     GalleryFragment gf = new GalleryFragment();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, gf).addToBackStack(null).commit();
+
+//                    Using this code specifically for fragment will make backstack ignored:
+//                    meaning, all the cardviews in the list before will disappeare ** Known Bug 2-16-17
                 }
 
             }
